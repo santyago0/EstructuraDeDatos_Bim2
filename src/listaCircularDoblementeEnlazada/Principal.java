@@ -14,6 +14,10 @@ public class Principal {
         lCD.insert(8);
         
         lCD.print();
+        
+        lCD.eliminar(lCD, 2);
+        
+        lCD.print();
     }
     
 }

@@ -36,6 +36,45 @@ public class ListaCircularDoblementeEnlazada {
         }
     }
     
+    public ListaCircularDoblementeEnlazada eliminar
+        (ListaCircularDoblementeEnlazada list, int key) {
+        Nodo currNodo = list.head;
+        Nodo prev = null;
+        
+        if(currNodo != null && currNodo.data == key) {
+            list.head = currNodo.next;
+            head.previous = currNodo.previous;
+            currNodo.next = null;
+            currNodo.previous = null;
+            System.out.println(key+" encontrado y eliminado");
+            return list;
+        }
+        
+        while(currNodo != null && currNodo.data != key) {
+            prev = currNodo;
+            currNodo = currNodo.next;
+        }
+        
+        if(currNodo != null) {
+            prev.next = currNodo.next;
+            currNodo.next.previous = currNodo.previous;
+            currNodo.next = null;
+            currNodo.previous = null;
+            
+            if(currNodo.next == head) {
+                tail = prev;
+            }
+            
+            System.out.println(key+" encontrado y eliminado");
+        }
+        
+        if(currNodo == null) {
+            System.out.println(key+" no encontrado");
+        }
+        
+        return list;
+    }
+    
     public void print() {
         Nodo current = head;
             if(head == null) {
