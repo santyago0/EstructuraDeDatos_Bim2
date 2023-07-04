@@ -40,17 +40,6 @@ public class ListaSimplementeEnlazada {
         return list;
     }
     
-    // Método para presentar los datos de los Nodos
-    public void presentar(ListaSimplementeEnlazada l) {
-        Nodo currNodo = l.head;
-        System.out.print("Lista Simplemente Enlazada:\n");
-        while(currNodo != null) {
-            System.out.print("\t"+currNodo.dato);
-            currNodo = currNodo.next;
-        }
-        System.out.print("\n");
-    }
-    
     // Método para eliminar un elemento de de la lista simplemente enlazada
     public ListaSimplementeEnlazada eliminar(ListaSimplementeEnlazada list,
             int key) {
@@ -80,6 +69,17 @@ public class ListaSimplementeEnlazada {
         }*/
         
         return list;
+    }
+    
+    // Método para presentar los datos de los Nodos
+    public void presentar(ListaSimplementeEnlazada l) {
+        Nodo currNodo = l.head;
+        System.out.print("Lista Simplemente Enlazada:\n");
+        while(currNodo != null) {
+            System.out.print(currNodo.dato +" ");
+            currNodo = currNodo.next;
+        }
+        System.out.print("\n");
     }
     
 }

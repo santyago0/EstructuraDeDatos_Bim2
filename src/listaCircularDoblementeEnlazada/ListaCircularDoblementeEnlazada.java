@@ -42,11 +42,12 @@ public class ListaCircularDoblementeEnlazada {
         Nodo prev = null;
         
         if(currNodo != null && currNodo.data == key) {
-            list.head = currNodo.next;
+            head = currNodo.next;
             head.previous = currNodo.previous;
+            tail.next = head;
             currNodo.next = null;
             currNodo.previous = null;
-            System.out.println(key+" encontrado y eliminado");
+            System.out.println("\n"+key+" encontrado y eliminado");
             return list;
         }
         
@@ -65,11 +66,11 @@ public class ListaCircularDoblementeEnlazada {
                 tail = prev;
             }
             
-            System.out.println(key+" encontrado y eliminado");
+            System.out.println("\n"+key+" encontrado y eliminado");
         }
         
         if(currNodo == null) {
-            System.out.println(key+" no encontrado");
+            System.out.println("\n"+key+" no encontrado");
         }
         
         return list;

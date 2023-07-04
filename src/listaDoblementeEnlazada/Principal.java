@@ -15,6 +15,10 @@ public class Principal {
         dL.insertar(1);
         
         dL.presentar();
+        
+        dL.eliminar(dL, 1);
+        
+        dL.presentar();
     }
     
 }

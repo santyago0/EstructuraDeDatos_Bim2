@@ -32,6 +32,42 @@ public class ListaCircularSimplementeEnlazada {
             nuevoNodo.next = head;
         }
     }
+    
+    public ListaCircularSimplementeEnlazada eliminar
+        (ListaCircularSimplementeEnlazada list, int key) {
+        Nodo currNodo = list.head;
+        Nodo prev = null;
+        
+        if(currNodo != null && currNodo.data == key) {
+            head = currNodo.next;
+            tail.next = head;
+            currNodo.next = null;
+            System.out.println("\n"+key+" encontrado y eliminado");
+            return list;
+        }
+        
+        while(currNodo != null && currNodo.data != key) {
+            prev = currNodo;
+            currNodo = currNodo.next;
+        }
+        
+        if(currNodo != null) {
+            prev.next = currNodo.next;
+            currNodo.next = null;
+            
+            if(currNodo.next == head) {
+                tail = prev;
+            }
+            
+            System.out.println("\n"+key+" encontrado y eliminado");
+        }
+        
+        if(currNodo == null) {
+            System.out.println("\n"+key+" no encontrado");
+        }
+        
+        return list;
+    }
 
     public void print() {
         Nodo current = head;
@@ -40,7 +76,7 @@ public class ListaCircularSimplementeEnlazada {
         }else {
             System.out.println("Nodes of the circular linked list: ");
             do {
-                System.out.print(" "+ current.data);
+                System.out.print(current.data +" ");
                 current = current.next;
             }while (current!= head);
             System.out.println();

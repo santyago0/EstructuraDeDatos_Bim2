@@ -12,6 +12,11 @@ public class Principal {
         lC.add(2);
         lC.add(3);
         lC.add(4);
+        
+        lC.print();
+        
+        lC.eliminar(lC, 4);
+        
         lC.print();
     }
     
