@@ -48,7 +48,7 @@ public class ListaSimplementeEnlazada {
         
         if(currNodo != null && currNodo.dato == key) {
             list.head = currNodo.next;
-            System.out.println(key+" encontrado y eliminado");
+            System.out.println("\n"+ key +" encontrado y eliminado");
             return list;
         }
         
@@ -59,9 +59,9 @@ public class ListaSimplementeEnlazada {
         
         if(currNodo != null) {
             prev.next = currNodo.next;
-            System.out.println(key+" encontrado y eliminado");
+            System.out.println("\n"+ key +" encontrado y eliminado");
         }else {
-            System.out.println(key+" no encontrado");
+            System.out.println("\n"+ key +" no encontrado");
         }
         
         /*if(currNodo == null) {

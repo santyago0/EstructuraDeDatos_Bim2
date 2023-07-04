@@ -47,7 +47,7 @@ public class ListaDoblementeEnlazada {
             head.previous = null;
             /*currNodo.next = null;
             currNodo.previous = null;*/
-            System.out.println("\n"+key+" encontrado y eliminado");
+            System.out.println("\n"+ key +" encontrado y eliminado");
             return list;
         }
         
@@ -66,11 +66,11 @@ public class ListaDoblementeEnlazada {
                 tail.next = null;
             }
             
-            System.out.println("\n"+key+" encontrado y eliminado");
+            System.out.println("\n"+ key +" encontrado y eliminado");
         }
         
         if(currNodo == null) {
-            System.out.println("\n"+key+" no encontrado");
+            System.out.println("\n"+ key +" no encontrado");
         }
         
         return list;

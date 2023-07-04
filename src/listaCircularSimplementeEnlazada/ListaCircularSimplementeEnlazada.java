@@ -42,7 +42,7 @@ public class ListaCircularSimplementeEnlazada {
             head = currNodo.next;
             tail.next = head;
             currNodo.next = null;
-            System.out.println("\n"+key+" encontrado y eliminado");
+            System.out.println("\n"+ key +" encontrado y eliminado");
             return list;
         }
         
@@ -59,11 +59,11 @@ public class ListaCircularSimplementeEnlazada {
                 tail = prev;
             }
             
-            System.out.println("\n"+key+" encontrado y eliminado");
+            System.out.println("\n"+ key +" encontrado y eliminado");
         }
         
         if(currNodo == null) {
-            System.out.println("\n"+key+" no encontrado");
+            System.out.println("\n"+ key +" no encontrado");
         }
         
         return list;
