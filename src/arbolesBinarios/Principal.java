@@ -21,7 +21,7 @@ public class Principal {
         ab.add(45);
         ab.add(70);
         ab.add(31);
-        ab.add(39);
+        ab.add(34);
         
         System.out.println("Presentación del Árbol en PreOrden:");
         ab.preOrden(ab.root);
